@@ -8,35 +8,48 @@ html {
   background-repeat: round;
   background-size: cover;
   color: white;
-  text-shadow: 2px 2px 8px black;
+  text-shadow: 4px 4px 8px black;
+  /* font-family: 'Preahvihear', cursive; */
+  font-family: 'Exo 2', sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template: 10% 40% 40% 10% / 10% 45% 45%;
+  grid-template: 10% 60% 15% 10%  / 11.5% 45% 40%;
   grid-gap: 5px;
-  padding: 1%;
+  /* padding: 0.5%; */
+  grid-gap: 1.5%;
 }
 
 .header {
   text-align: center;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
-  border: 2px solid black;
+  border: 2px solid ;
   background-color: rgba(255, 255, 255, .65);
-  box-shadow: 2px 2px 8px gray;
+  box-shadow: 4px 4px 8px black;
   padding-top: 1%;
   padding-bottom: 1%;
+  border: 2px solid rgb(2,156,222);
+}
+
+.header h1 {
+  font-size: 5vh;
+  margin-bottom: 0;
+}
+
+.header form {
+  margin-left: 80%;
 }
 
 .sideBar {
-  border: 2px solid black;
   grid-column: 1 / 2;
   grid-row: 2 / -1;
   text-align: center;
   background-color: rgba(255, 255, 255, .65);
-  box-shadow: 2px 2px 8px gray;
+  box-shadow: 4px 4px 8px black;
   padding-top: 25%;
+  border: 2px solid rgb(2,156,222);
 }
 
 .sideBar a {
@@ -47,42 +60,62 @@ html {
 .mainContent {
   grid-column: 2 / -1;
   grid-row: 2 / 3;
-  border: 2px solid black;
   background-color: rgba(255, 255, 255, .65);
-  box-shadow: 2px 2px 8px gray;
+  box-shadow: 4px 4px 8px black;
   padding-top: 1%;
   padding-bottom: 1%;
   text-align: center;
+  border: 2px solid rgb(2,156,222);
+}
+
+.mainContent h2 {
+  font-size: 5vh;
+}
+
+.items {
+background-color: rgba(12,247,0,.65);
+border: 1px black solid;
+max-width: 80%;
+margin-left: 10%;
+margin-bottom: 2%;
 }
 
 .adPlace {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
-  border: 2px solid black;
+  border: 2px solid ;
   background-color: rgba(255, 255, 255, .65);
-  box-shadow: 2px 2px 8px gray;
+  box-shadow: 4px 4px 8px black;
   padding-top: 1%;
   padding-bottom: 1%;
   text-align: center;
+  font-size: 3vh;
+  border: 2px solid rgb(2,156,222);
+}
+
+.adPlace img {
+  height: 50%;
 }
 .signup {
   grid-column: 3 / 4;
   grid-row: 3 / 4;
-  border: 2px solid black;
+  border: 2px solid ;
   background-color: rgba(255, 255, 255, .65);
-  box-shadow: 2px 2px 8px gray;
+  box-shadow: 4px 4px 8px black;
   padding-top: 1%;
   padding-bottom: 1%;
   text-align: center;
+  border: 2px solid rgb(2,156,222);
 }
 
 .footer {
   grid-column: 2 / -1;
   grid-row: 4 / 5;
-  border: 2px solid black;
+  border: 2px solid ;
   background-color: rgba(255, 255, 255, .65);
-  box-shadow: 2px 2px 8px gray;
+  box-shadow: 4px 4px 8px black;
   text-align: center;
   padding-top: 1%;
   padding-bottom: 1%;
+  border: 2px solid rgb(2,156,222);
 }

@@ -1,0 +1,6 @@
+<h2> Baking Events in NYC </h2>
+<% @events.first(10).each do |event| %>
+<h3><%= event["name"]["text"] %></h3>
+<p><%= event["description"]["text"] %></p>
+<a href="<%=event['url']%>">Event Info</a>
+<% end %>

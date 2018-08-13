@@ -1,1 +1,8 @@
 <h2>C'thern's World Famous Cookies</h2>
+
+<% $cookies.each do |cookie| %>
+<div class="items">
+  <h1> <%=cookie.name%> </h1>
+  <p> $<%=cookie.cost%> Dollars Calories: <%=cookie.calories%> Description: <%=cookie.description%> </p>
+ </div>
+<% end %>

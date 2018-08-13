@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Preahvihear" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/main.css">
     <meta charset="utf-8">
     <title>C'thern's Cookies</title>
@@ -8,23 +9,26 @@
   <body>
 <section class="container">
 <div class="header">
-
-<h1>C'thern's Cookies</h1>
-<form class="" action="index.html">
+  <h1>C'thern's Cookies</h1>
+<form action="/thecall" method="GET">
   <input type="search" name="search_bar" placeholder="Search Cookies">
   <input type="submit" value="Search">
 </form>
 </div>
 <div class="sideBar">
+<a href="http://localhost:4567/">Home</a><br>
 <a href="http://localhost:4567/cookies">Cookies</a><br>
 <a href="http://localhost:4567/cakes">Cakes</a><br>
 <a href="http://localhost:4567/muffins">Muffins</a><br>
+<a href="http://localhost:4567/events">Events Near You</a><br>
 </div>
 <div class="mainContent">
   <%= yield %>
 </div>
 <div class="adPlace">
+  <p>Advertise Here!</p>
   <img src="cookies.png">
+  <p>Your cookies are safe with us ;)</p>
 </div>
 <div class="signup">
   <p>Don't wait, sign up for our amazing offers.</p>

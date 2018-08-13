@@ -1,1 +1,9 @@
 <h2>Muffins to die for!</h2>
+
+
+<% $muffins.each do |muffin| %>
+<div class="items">
+  <h1> <%=muffin.name%> </h1>
+  <p> $<%=muffin.cost%> Dollars Calories: <%=muffin.calories%> Description: <%=muffin.description%> </p>
+ </div>
+<% end %>
