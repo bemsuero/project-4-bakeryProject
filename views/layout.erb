@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="/main.css">
     <meta charset="utf-8">
     <title>C'thern's Cookies</title>
   </head>
   <body>
-    <%= yield %>
+<section class="container">
+<div class="header">
+
+<h1>C'thern's Cookies</h1>
+<form class="" action="index.html">
+  <input type="search" name="search_bar" placeholder="Search Cookies">
+  <input type="submit" value="Search">
+</form>
+</div>
+<div class="sideBar">
+<a href="http://localhost:4567/cookies">Cookies</a><br>
+<a href="http://localhost:4567/cakes">Cakes</a><br>
+<a href="http://localhost:4567/muffins">Muffins</a><br>
+</div>
+<div class="mainContent">
+  <%= yield %>
+</div>
+<div class="adPlace">
+  <img src="cookies.png">
+</div>
+<div class="signup">
+  <p>Don't wait, sign up for our amazing offers.</p>
+  <form action="/signup" method="GET">
+  First Name: <input type="text" placeholder="'John'"name="first_name"><br>
+  Last Name: <input type="text" placeholder="'Smith'"name="last_name"><br>
+  Email: <input type="email" placeholder="'john@smith.com'"name="email"><br>
+  <input type="submit" value="Submit">
+  </form>
+</div>
+<div class="footer">
+<p>
+  C'thern's Cookies, 123 Floral Lane, New York, NY 10001
+</p>
+
+<p>
+  Web Design: Vents LLC
+</p>
+
+</div>
+  </section>
   </body>
+  <script src="/main.js">
+
+  </script>
 </html>
