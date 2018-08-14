@@ -2,6 +2,7 @@
 <% @events.first(10).each do |event| %>
 <h3><%= event["name"]["text"] %></h3>
 <img src='<%= event["logo"]["url"] %>'>
+<p>Event Time: <%= event["start"]["local"] %></p>
 <p><%= event["description"]["text"] %></p>
 <a href="<%=event['url']%>">Event Info</a>
 <hr>

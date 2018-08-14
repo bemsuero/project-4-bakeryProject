@@ -1,7 +1,8 @@
 :root {
-  --boxBack: rgba(255, 255, 255, .65);
-  --boxShadow: 4px 4px 8px black;
-  --borderBlueColor: 2px solid rgb(2,156,222);
+  --boxBack: rgba(130, 162, 149, .65);
+  --boxShadow: 4px 4px 8px rgba(1,16,53,1);
+  --borderBlueColor: 2px solid rgb(5,78,141);
+  --textColor: rgb(225,235,230);
   /*this is how you do it.*/
 }
 
@@ -9,17 +10,17 @@
   background-image: url("background.jpg");
   background-repeat: round;
   background-size: cover;
-  color: white;
+  color: var(--textColor);
   text-shadow: var(--boxShadow);
-  font-family: 'Exo 2', sans-serif;
+font-family: 'Dosis', sans-serif;
 }
 
 .praise {
   background-image: url("cthuluarms.jpg");
   background-repeat: round;
   background-size: contain;
-  color: black;
-  text-shadow: 4px 4px 8px rgba(13,255,0,.76);
+  color: rgba(12,59,16,1);
+  text-shadow: 4px 4px 8px rgba(183,229,106,.76);
 font-family: 'Hanalei Fill', cursive;
 }
 
@@ -40,29 +41,42 @@ font-family: 'Hanalei Fill', cursive;
   padding-top: 1%;
   padding-bottom: 1%;
   border: var(--borderBlueColor);
+  max-height: 100px;
+  display: grid;
+  grid-template: 100% / 25% 45% 20%;
 }
 
 .header h1 {
-  font-size: 5vh;
-  margin-bottom: 0;
+font-size: 5vh;
+grid-row: 1 / 2;
+grid-column: 2 / 3;
+margin-left: 35%;
 }
 
-.header form {
-  margin-left: 80%;
+.header img {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  max-height: 100%;
+  margin-left: 25%;
 }
+
 #shoppingCart {
   border: 2px solid white;
   width: 300px;
   height: 200px;
   position: absolute;
   left: 72%;
-  top: 19%;
+  top: 10%;
   background-color: rgba(0,0,0,.76);
 }
 
 #cartButton {
-  position: relative;
-  left: 45%;
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  height: 50%;
+  width: 25%;
+  margin-left: 100%;
+  font-size: 3vh;
 }
 
 .show{
@@ -83,11 +97,13 @@ font-family: 'Hanalei Fill', cursive;
 
 .sideBar a {
   text-decoration: none;
-  color: white;
+  color: var(--textColor);
+  font-size: 2.75vh;
 }
 
 .sideBar p {
   text-decoration: none;
+  font-size: 2.75vh;
 }
 
 .mainContent {
@@ -102,7 +118,7 @@ font-family: 'Hanalei Fill', cursive;
 }
 
 .mainContent h2 {
-  font-size: 5vh;
+  font-size: 4.5vh;
 }
 
 .mainContent img {
@@ -110,7 +126,7 @@ font-family: 'Hanalei Fill', cursive;
 }
 
 .items {
-background-color: rgba(12,247,0,.65);
+background-color: rgba(0,105,122,.65);
 border: 1px black solid;
 max-width: 80%;
 margin-left: 10%;
@@ -144,6 +160,7 @@ border-radius: 8px;
   padding-bottom: 1%;
   text-align: center;
   border: var(--borderBlueColor);
+  font-size: 3.75vh;
 }
 
 .footer {
@@ -159,13 +176,25 @@ border-radius: 8px;
 }
 
 button {
-  color: white;
+  color: var(--textColor);
   background-color: black;
   box-shadow: 2px 2px rgba(0,0,0,.66);
+  margin-bottom: 1%;
 }
 
 div input[type="submit"] {
-  color: white;
+  color: var(--textColor);
   background-color: black;
   box-shadow: 2px 2px rgba(0,0,0,.66);
+    font-size: 2.25vh;
+}
+
+div input[type="text"] {
+      font-size: 2.25vh;
+}
+
+
+div input[type="email"] {
+  margin-left: 10.5%;
+    font-size: 2.25vh;
 }

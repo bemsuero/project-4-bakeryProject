@@ -5,6 +5,7 @@ require "sinatra"
 require "curb"
 # include SendGrid
 
+
 # def email
 # from = Email.new(email: 'test@example.com')
 # to = Email.new(email: 'test@example.com')
@@ -54,7 +55,7 @@ end
 get '/events' do
   @res = params[:query]
   # @web_search = Curl::Easy.perform("https://www.eventbriteapi.com/v3/events/search/?token=F33FG3NCO5EPWSKXWJXF") #with images
-  @web_search = Curl::Easy.perform("https://www.eventbriteapi.com/v3/events/search/?q=baking&location.address=new+york&token=F33FG3NCO5EPWSKXWJXF") # with search function
+  @web_search = Curl::Easy.perform("https://www.eventbriteapi.com/v3/events/search/?q=baking&location.address=new+york&token=#{ENV['API_TOKEN']}") # with search function
   @look_through = @web_search.body_str
   @data = JSON.parse(@look_through)
   @events = @data["events"]
@@ -116,12 +117,12 @@ end
 @butter_chip = Cookie.new("Butter Cookie", 2, 100, "/images/butter.jpg", "Grandma's Favorite! A simple classic.")
 @ginger_bread = Cookie.new("Gingerbread Cookie", 2, 200, "/images/ginger.jpg", "Flavored with ginger, cloves, cinnamon and sweetened with honey, these cookies are out of this world!")
 
-@chocolate_chip_cake = Cake.new("Chocolate Chip Cake", 2, 300, "/images/chocolatecake.jpg", "A rich and creamy chocolate chip cookie. Dipped in the finest chocolate sauce.")
+@chocolate_chip_cake = Cake.new("Chocolate Chip Cake", 2, 300, "/images/chocolatecake.jpg", "A rich and creamy chocolate chip cake. Dipped in the finest chocolate sauce.")
 @peanut_butter_cake = Cake.new("Peanut Butter Cake", 2, 500, "/images/peanutcake.jpg", "Cakes baked with peanut butter then smothered in a peanut butter sauce.")
 @butter_chip_cake = Cake.new("Butter Cake", 2, 100, "/images/buttercake.jpg", "Grandma's Favorite! A simple classic.")
-@ginger_bread_cake = Cake.new("Gingerbread Cake", 2, 200, "/images/gingercake.jpg", "Flavored with ginger, cloves, cinnamon and sweetened with honey, these cookies are out of this world!")
+@ginger_bread_cake = Cake.new("Gingerbread Cake", 2, 200, "/images/gingercake.jpg", "Flavored with ginger, cloves, cinnamon and sweetened with honey, these cakes are out of this world!")
 
-@chocolate_chip_muffin = Muffin.new("Chocolate Chip Muffin", 2, 300, "/images/chocolatemuffin.jpg", "A rich and creamy chocolate chip cookie. Dipped in the finest chocolate sauce.")
+@chocolate_chip_muffin = Muffin.new("Chocolate Chip Muffin", 2, 300, "/images/chocolatemuffin.jpg", "A rich and creamy chocolate chip muffin. Dipped in the finest chocolate sauce.")
 @peanut_butter_muffin = Muffin.new("Peanut Butter Muffin", 2, 500, "/images/peanutmuffin.jpg", "Muffins baked with peanut butter then smothered in a peanut butter sauce.")
 @butter_chip_muffin = Muffin.new("Butter Muffin", 2, 100, "/images/buttermuffin.jpg", "Grandma's Favorite! A simple classic.")
-@ginger_bread_muffin = Muffin.new("Gingerbread Muffin", 2, 200, "/images/gingermuffin.jpg", "Flavored with ginger, cloves, cinnamon and sweetened with honey, these cookies are out of this world!")
+@ginger_bread_muffin = Muffin.new("Gingerbread Muffin", 2, 200, "/images/gingermuffin.jpg", "Flavored with ginger, cloves, cinnamon and sweetened with honey, these muffins are out of this world!")

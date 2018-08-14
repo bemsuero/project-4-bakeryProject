@@ -1,10 +1,12 @@
-<h2>C'thern's World Famous Cookies</h2>
+<h2>Cthulhu's World Famous Cookies</h2>
 
 <% $cookies.each do |cookie| %>
 <div class="items">
   <h1> <%=cookie.name%> </h1>
   <img src="<%= cookie.image %>">
-  <p> <%=cookie.cost%> Dollars Calories: <%=cookie.calories%> Description: <%=cookie.description%> </p>
-<button onclick="addItem('<%=cookie.name%>', '<%=cookie.cost%>')">Add Item To Cart</button>
+  <p> $<%=cookie.cost%> Dollars </p>
+  <p> Calories: <%=cookie.calories%> </p>
+  <p> <%=cookie.description%> </p>
+<button onclick="addItem('<%=cookie.name%>', '<%=cookie.cost%>')">Add To Cart</button>
  </div>
 <% end %>
