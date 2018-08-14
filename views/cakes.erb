@@ -3,6 +3,8 @@
 <% $cakes.each do |cake| %>
 <div class="items">
   <h1> <%=cake.name%> </h1>
+  <img src="<%= cake.image %>">
   <p> $<%=cake.cost%> Dollars Calories: <%=cake.calories%> Description: <%=cake.description%> </p>
+  <button onclick="addItem('<%=cake.name%>', '<%=cake.cost%>')">Add Item To Cart</button>
  </div>
 <% end %>

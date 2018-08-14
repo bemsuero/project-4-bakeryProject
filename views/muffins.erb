@@ -4,6 +4,8 @@
 <% $muffins.each do |muffin| %>
 <div class="items">
   <h1> <%=muffin.name%> </h1>
+  <img src="<%= muffin.image %>">
   <p> $<%=muffin.cost%> Dollars Calories: <%=muffin.calories%> Description: <%=muffin.description%> </p>
+<button onclick="addItem('<%=muffin.name%>', '<%=muffin.cost%>')">Add Item To Cart</button>
  </div>
 <% end %>

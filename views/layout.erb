@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html id="page" class="cookieSite">
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Exo+2|Preahvihear" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Hanalei+Fill" rel="stylesheet">
     <meta charset="utf-8">
     <title>C'thern's Cookies</title>
   </head>
@@ -10,17 +12,26 @@
 <section class="container">
 <div class="header">
   <h1>C'thern's Cookies</h1>
-<form action="/thecall" method="GET">
-  <input type="search" name="search_bar" placeholder="Search Cookies">
-  <input type="submit" value="Search">
-</form>
+  <div class="hide" id="shoppingCart">
+    Current Items:
+    <div id="cookieList"></div>
+    <div id="cakeList"></div>
+    <div id="muffinList"></div>
+    <button onclick="showItemsInCart()">Show Items</button>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="hideCart()">Hide Cart</button>
+  </div>
+<button id="cartButton" onclick="showCart()"><i class="fas fa-shopping-cart"></i></button>
 </div>
 <div class="sideBar">
-<a href="http://localhost:4567/">Home</a><br>
-<a href="http://localhost:4567/cookies">Cookies</a><br>
-<a href="http://localhost:4567/cakes">Cakes</a><br>
-<a href="http://localhost:4567/muffins">Muffins</a><br>
-<a href="http://localhost:4567/events">Events Near You</a><br>
+  <p>Navigation</p>
+  <hr>
+<a href="http://localhost:4567/"> <p>Home</p> </a><br>
+<a href="http://localhost:4567/cookies"> <p>Cookies</p> </a><br>
+<a href="http://localhost:4567/cakes"> <p>Cakes</p></a><br>
+<a href="http://localhost:4567/muffins"> <p>Muffins</p> </a><br>
+<a href="http://localhost:4567/events"> <p>Events Near You</p> </a><br>
+<a href="http://localhost:4567/contact_us"> <p>Contact Us</p> </a><br>
 </div>
 <div class="mainContent">
   <%= yield %>
@@ -43,7 +54,9 @@
 <p>
   C'thern's Cookies, 123 Floral Lane, New York, NY 10001
 </p>
-
+<p>
+Business Hours: Mon-Sat: 8am-5pm Sun: Closed.
+</p>
 <p>
   Web Design: Vents LLC
 </p>

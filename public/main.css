@@ -1,24 +1,33 @@
 :root {
-  --something: rgb(212, 66, 66);
+  --boxBack: rgba(255, 255, 255, .65);
+  --boxShadow: 4px 4px 8px black;
+  --borderBlueColor: 2px solid rgb(2,156,222);
   /*this is how you do it.*/
 }
 
-html {
+.cookieSite {
   background-image: url("background.jpg");
   background-repeat: round;
   background-size: cover;
   color: white;
-  text-shadow: 4px 4px 8px black;
-  /* font-family: 'Preahvihear', cursive; */
+  text-shadow: var(--boxShadow);
   font-family: 'Exo 2', sans-serif;
+}
+
+.praise {
+  background-image: url("cthuluarms.jpg");
+  background-repeat: round;
+  background-size: contain;
+  color: black;
+  text-shadow: 4px 4px 8px rgba(13,255,0,.76);
+font-family: 'Hanalei Fill', cursive;
 }
 
 .container {
   display: grid;
   grid-template: 10% 60% 15% 10%  / 11.5% 45% 40%;
-  grid-gap: 5px;
   /* padding: 0.5%; */
-  grid-gap: 1.5%;
+  grid-gap: 1%;
 }
 
 .header {
@@ -26,11 +35,11 @@ html {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   border: 2px solid ;
-  background-color: rgba(255, 255, 255, .65);
-  box-shadow: 4px 4px 8px black;
+  background-color: var(--boxBack);
+  box-shadow: var(--boxShadow);
   padding-top: 1%;
   padding-bottom: 1%;
-  border: 2px solid rgb(2,156,222);
+  border: var(--borderBlueColor);
 }
 
 .header h1 {
@@ -41,15 +50,35 @@ html {
 .header form {
   margin-left: 80%;
 }
+#shoppingCart {
+  border: 2px solid white;
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  left: 72%;
+  top: 19%;
+  background-color: rgba(0,0,0,.76);
+}
 
+#cartButton {
+  position: relative;
+  left: 45%;
+}
+
+.show{
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
+}
 .sideBar {
   grid-column: 1 / 2;
   grid-row: 2 / -1;
   text-align: center;
-  background-color: rgba(255, 255, 255, .65);
-  box-shadow: 4px 4px 8px black;
-  padding-top: 25%;
-  border: 2px solid rgb(2,156,222);
+  background-color: var(--boxBack);
+  box-shadow: var(--boxShadow);
+  border: var(--borderBlueColor);
 }
 
 .sideBar a {
@@ -57,19 +86,27 @@ html {
   color: white;
 }
 
+.sideBar p {
+  text-decoration: none;
+}
+
 .mainContent {
   grid-column: 2 / -1;
   grid-row: 2 / 3;
-  background-color: rgba(255, 255, 255, .65);
-  box-shadow: 4px 4px 8px black;
+  background-color: var(--boxBack);
+  box-shadow: var(--boxShadow);
   padding-top: 1%;
   padding-bottom: 1%;
   text-align: center;
-  border: 2px solid rgb(2,156,222);
+  border: var(--borderBlueColor);
 }
 
 .mainContent h2 {
   font-size: 5vh;
+}
+
+.mainContent img {
+  height: 30vh;
 }
 
 .items {
@@ -78,19 +115,20 @@ border: 1px black solid;
 max-width: 80%;
 margin-left: 10%;
 margin-bottom: 2%;
+border-radius: 8px;
 }
 
 .adPlace {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
   border: 2px solid ;
-  background-color: rgba(255, 255, 255, .65);
-  box-shadow: 4px 4px 8px black;
+  background-color: var(--boxBack);
+  box-shadow: var(--boxShadow);
   padding-top: 1%;
   padding-bottom: 1%;
   text-align: center;
   font-size: 3vh;
-  border: 2px solid rgb(2,156,222);
+  border: var(--borderBlueColor);
 }
 
 .adPlace img {
@@ -100,22 +138,34 @@ margin-bottom: 2%;
   grid-column: 3 / 4;
   grid-row: 3 / 4;
   border: 2px solid ;
-  background-color: rgba(255, 255, 255, .65);
-  box-shadow: 4px 4px 8px black;
+  background-color: var(--boxBack);
+  box-shadow: var(--boxShadow);
   padding-top: 1%;
   padding-bottom: 1%;
   text-align: center;
-  border: 2px solid rgb(2,156,222);
+  border: var(--borderBlueColor);
 }
 
 .footer {
   grid-column: 2 / -1;
   grid-row: 4 / 5;
   border: 2px solid ;
-  background-color: rgba(255, 255, 255, .65);
-  box-shadow: 4px 4px 8px black;
+  background-color: var(--boxBack);
+  box-shadow: var(--boxShadow);
   text-align: center;
   padding-top: 1%;
   padding-bottom: 1%;
-  border: 2px solid rgb(2,156,222);
+  border: var(--borderBlueColor);
+}
+
+button {
+  color: white;
+  background-color: black;
+  box-shadow: 2px 2px rgba(0,0,0,.66);
+}
+
+div input[type="submit"] {
+  color: white;
+  background-color: black;
+  box-shadow: 2px 2px rgba(0,0,0,.66);
 }

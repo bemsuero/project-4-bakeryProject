@@ -3,6 +3,8 @@
 <% $cookies.each do |cookie| %>
 <div class="items">
   <h1> <%=cookie.name%> </h1>
-  <p> $<%=cookie.cost%> Dollars Calories: <%=cookie.calories%> Description: <%=cookie.description%> </p>
+  <img src="<%= cookie.image %>">
+  <p> <%=cookie.cost%> Dollars Calories: <%=cookie.calories%> Description: <%=cookie.description%> </p>
+<button onclick="addItem('<%=cookie.name%>', '<%=cookie.cost%>')">Add Item To Cart</button>
  </div>
 <% end %>
