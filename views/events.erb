@@ -1,9 +1,17 @@
-<h2> Baking Events in NYC </h2>
+<h2>
+  Baking Events in NYC
+</h2>
 <% @events.first(10).each do |event| %>
-<h3><%= event["name"]["text"] %></h3>
-<img src='<%= event["logo"]["url"] %>'>
-<p>Event Time: <%= event["start"]["local"] %></p>
-<p><%= event["description"]["text"] %></p>
-<a href="<%=event['url']%>">Event Info</a>
-<hr>
+  <h3><%= event["name"]["text"] %></h3>
+  <img src='<%= event["logo"]["url"] %>'>
+  <p id="eventTime"><%= event["start"]["local"].byteslice(6) %>
+    /
+    <%= event["start"]["local"].byteslice(9) %>
+    /
+    <%= event["start"]["local"].byteslice(0..3) %>
+    at
+    <%= event["start"]["local"].byteslice(11..15) %></p>
+  <p><%= event["description"]["text"] %></p>
+  <a href="<%=event['url']%>">Event Info</a>
+  <hr>
 <% end %>

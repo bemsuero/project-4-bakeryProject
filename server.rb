@@ -118,7 +118,7 @@ end
 @ginger_bread = Cookie.new("Gingerbread Cookie", 2, 200, "/images/ginger.jpg", "Flavored with ginger, cloves, cinnamon and sweetened with honey, these cookies are out of this world!")
 
 @chocolate_cake = Cake.new("Chocolate Chip Cake", 2, 300, "/images/chocolatecake.jpg", "Moist, delicious chocolate cake for any celebration.")
-@peanut_butter_cake = Cake.new("Peanut Butter Cake", 2, 500, "/images/peanutcake.jpg", "Very moist and fluffy! The flavors are the perfect blend of chocolate, bananas, and Nutella. Scrumptious!")
+@peanut_butter_cake = Cake.new("Nutella Cake", 2, 500, "/images/peanutcake.jpg", "Very moist and fluffy! The flavors are the perfect blend of chocolate, bananas, and Nutella. Scrumptious!")
 @lemon_buttermilk_cake = Cake.new("Lemon Buttermilk Pound Cake", 2, 100, "/images/buttercake.jpg", "This is not your daughter's cake. No triple-threat chocolate, caramel, salted, nouveau let-it-sit-for-a-day-so-the-flavor a-can-blend cake here. This is simply a fabulous old-school cake, with the perfect moistness and density of a pound-cake-gone-right.")
 @ginger_bread_cake = Cake.new("Gingerbread Cake", 2, 200, "/images/gingercake.jpg", "This is a wonderful, moist easy cake with perfect texture. It's so nice to have a festive winter dessert that doesn't take butter. The glaze over the warm cake is the perfect touch.")
 
