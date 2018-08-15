@@ -111,6 +111,13 @@ color: var(--headerColor);
   box-shadow: var(--boxShadow);
   border: var(--borderBlueColor);
   border-radius: 8px;
+  transition-duration: 2s;
+}
+
+.sideImage:hover {
+  background-image: url("logo.png");
+  background-size: contain;
+  transition-duration: 2s;
 }
 
 .sideBar p {
