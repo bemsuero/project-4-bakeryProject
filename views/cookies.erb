@@ -4,8 +4,8 @@
 <div class="items">
   <h1> <%=cookie.name%> </h1>
   <img src="<%= cookie.image %>">
-  <p> $<%=cookie.cost%> Dollars </p>
-  <p> Calories: <%=cookie.calories%> </p>
+  <p> $<%=cookie.cost%> Dollars a pack.</p>
+  <p> Calories: <%=cookie.calories%>. </p>
   <p> <%=cookie.description%> </p>
 <button onclick="addItem('<%=cookie.name%>', '<%=cookie.cost%>')">Add To Cart</button>
  </div>

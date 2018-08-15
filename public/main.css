@@ -1,8 +1,9 @@
 :root {
   --boxBack: rgba(130, 162, 149, .65);
-  --boxShadow: 4px 4px 8px rgba(1,16,53,1);
+  --boxShadow: 6px 6px 8px rgba(1,16,53,1);
   --borderBlueColor: 2px solid rgb(5,78,141);
   --textColor: rgb(225,235,230);
+  --headerColor: rgba(144,255,175,1);
   /*this is how you do it.*/
 }
 
@@ -44,6 +45,7 @@ font-family: 'Hanalei Fill', cursive;
   max-height: 100px;
   display: grid;
   grid-template: 100% / 25% 45% 20%;
+  border-radius: 8px;
 }
 
 .header h1 {
@@ -51,6 +53,7 @@ font-size: 5vh;
 grid-row: 1 / 2;
 grid-column: 2 / 3;
 margin-left: 35%;
+color: var(--headerColor);
 }
 
 .header img {
@@ -68,6 +71,7 @@ margin-left: 35%;
   left: 72%;
   top: 10%;
   background-color: rgba(0,0,0,.76);
+  border-radius: 8px;
 }
 
 #cartButton {
@@ -77,6 +81,7 @@ margin-left: 35%;
   width: 25%;
   margin-left: 100%;
   font-size: 3vh;
+  border-radius: 8px;
 }
 
 .show{
@@ -88,23 +93,38 @@ margin-left: 35%;
 }
 .sideBar {
   grid-column: 1 / 2;
-  grid-row: 2 / -1;
+  grid-row: 2 / 3;
   text-align: center;
   background-color: var(--boxBack);
   box-shadow: var(--boxShadow);
   border: var(--borderBlueColor);
+  border-radius: 8px;
+  margin-bottom: 1%;
+}
+
+.sideImage {
+  background-image: url("logo.png");
+  background-size: cover;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  background-color: var(--boxBack);
+  box-shadow: var(--boxShadow);
+  border: var(--borderBlueColor);
+  border-radius: 8px;
+}
+
+.sideBar p {
+  text-decoration: none;
+  font-size: 2.25vh;
+  color: var(--headerColor);
 }
 
 .sideBar a {
   text-decoration: none;
   color: var(--textColor);
-  font-size: 2.75vh;
+  font-size: 2.25vh;
 }
 
-.sideBar p {
-  text-decoration: none;
-  font-size: 2.75vh;
-}
 
 .mainContent {
   grid-column: 2 / -1;
@@ -115,14 +135,18 @@ margin-left: 35%;
   padding-bottom: 1%;
   text-align: center;
   border: var(--borderBlueColor);
+  border-radius: 8px;
 }
 
 .mainContent h2 {
   font-size: 4.5vh;
+  color: var(--headerColor);
 }
 
 .mainContent img {
   height: 30vh;
+  border-radius: 8px;
+  box-shadow: var(--boxShadow);
 }
 
 .items {
@@ -141,14 +165,15 @@ border-radius: 8px;
   background-color: var(--boxBack);
   box-shadow: var(--boxShadow);
   padding-top: 1%;
-  padding-bottom: 1%;
+  padding-bottom: 0;
   text-align: center;
   font-size: 3vh;
   border: var(--borderBlueColor);
+  border-radius: 8px;
 }
 
 .adPlace img {
-  height: 50%;
+  height: 30%;
 }
 .signup {
   grid-column: 3 / 4;
@@ -161,10 +186,11 @@ border-radius: 8px;
   text-align: center;
   border: var(--borderBlueColor);
   font-size: 3.75vh;
+  border-radius: 8px;
 }
 
 .footer {
-  grid-column: 2 / -1;
+  grid-column: 1 / -1;
   grid-row: 4 / 5;
   border: 2px solid ;
   background-color: var(--boxBack);
@@ -173,13 +199,15 @@ border-radius: 8px;
   padding-top: 1%;
   padding-bottom: 1%;
   border: var(--borderBlueColor);
+  border-radius: 8px;
+  margin-bottom: 1%;
 }
 
 button {
   color: var(--textColor);
   background-color: black;
   box-shadow: 2px 2px rgba(0,0,0,.66);
-  margin-bottom: 1%;
+  margin-bottom: 2%;
 }
 
 div input[type="submit"] {
@@ -197,4 +225,9 @@ div input[type="text"] {
 div input[type="email"] {
   margin-left: 10.5%;
     font-size: 2.25vh;
+}
+
+div i {
+  font-size: 4vh;
+  padding-left: 2%;
 }
