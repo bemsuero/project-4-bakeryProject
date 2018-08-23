@@ -4,9 +4,9 @@
 <% @events.first(10).each do |event| %>
   <h3><%= event["name"]["text"] %></h3>
   <img src='<%= event["logo"]["url"] %>'>
-  <p id="eventTime"><%= event["start"]["local"].byteslice(6) %>
+  <p id="eventTime"><%= event["start"]["local"].byteslice(5..6) %>
     /
-    <%= event["start"]["local"].byteslice(9) %>
+    <%= event["start"]["local"].byteslice(8..9) %>
     /
     <%= event["start"]["local"].byteslice(0..3) %>
     at
